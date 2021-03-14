@@ -17,9 +17,11 @@ function setup() {
 
 function clockFace() {
   var numPoints = 60;
+  var numMinutes = 12;
+  var angleMinutes = 360/numMinutes
   var angle = 360 / numPoints;
   strokeWeight(4);
-  stroke(255, 200);
+  stroke(255);
   beginShape(POINTS);
   var i = 0;
   while (i < numPoints) {
@@ -28,6 +30,22 @@ function clockFace() {
     vertex(x, y);
     i++;
   }
+  endShape();
+  beginShape(POINTS);
+  
+  strokeWeight(10);
+  stroke(255);
+  var i = 0;
+  while (i < numMinutes) {
+    x = cos(angleMinutes * i) * RSecond;
+    y = sin(angleMinutes * i) * RSecond;
+    vertex(x, y);
+    i++;
+  }
+  
+  
+  
+  
   endShape();
 
 }
