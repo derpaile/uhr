@@ -10,6 +10,7 @@ let button;
 let r = 0;
 let g = 0;
 let b = 0;
+let farbeuhr = 255;
 
 function setup() {
   createCanvas(breite, hoehe);
@@ -47,7 +48,7 @@ function clockFace() {
   var angleMinutes = 360/numMinutes
   var angle = 360 / numPoints;
   strokeWeight(4);
-  stroke(255);
+  stroke(farbeuhr);
   beginShape(POINTS);
   var i = 0;
   while (i < numPoints) {
@@ -60,7 +61,7 @@ function clockFace() {
   endShape();
   beginShape(POINTS);
   strokeWeight(10);
-  stroke(255);
+  stroke(farbeuhr);
   i = 0;
   
   while (i < numMinutes) {
@@ -80,7 +81,7 @@ function hourarrow()  {
   let y1 = 0;
   let x2 = cos(angleHour)*RHour;
   let y2 = sin(angleHour)*RHour;
-  stroke(255);
+  stroke(farbeuhr);
   strokeWeight(7);
 
   line(x1,y1,x2,y2)
@@ -176,5 +177,14 @@ function mousePressed() {
    r = random(0,255);
    g = random(0,255);
    b = random(0,255);
+  if (r+g+b <= 300) {
+    farbeuhr = 255;
+  }
+    else {
+      farbeuhr = 0;
+    }
+    
+  
+  
   background(r,g,b);
   }
