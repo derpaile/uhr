@@ -113,7 +113,7 @@ function secondarrow() {
 
 function textclock() {
 
-  stroke(255);
+  stroke(farbeuhr);
   fill(0,158,224);
   textFont('ComicSansMS',55);  
   
@@ -148,7 +148,7 @@ function textclock() {
 function textdate(){
 
 stringDate = String(Day) + "." + String(Month) + "." + String(Year);
-stroke(255);
+stroke(farbeuhr);
 fill(0,158,224);
 textFont('ComicSansMS',55); 
 textAlign(CENTER, BOTTOM);
