@@ -11,17 +11,18 @@ let r = 0;
 let g = 0;
 let b = 0;
 let farbeuhr = 255;
-var sound; 
+let sound;
+
 function preload(){
-     sound = loadSound("clock1minute.mp3");
-
-
+  sound = loadSound('clock1minute.mp3');
+  
 }
+
 function setup() {
   createCanvas(breite, hoehe);
   angleMode(DEGREES);
-  //button = createButton('Drück mich pls dann ändere ich mein // Antlitz');
-    sound.play();
+  //button = createButton('Drück mich pls dann ändere ich mein Antlitz');
+  sound.loop();
 }
 
 
@@ -30,18 +31,11 @@ function setup() {
 
 function draw() {
   //mousePressed(changeBG);
- // 
-  
-
   Hour = hour();
   HourSingleDigit = abs(hour()-12)
   Minute = minute();
   Second = second();
   Month = month();
-  
-  
-  
-  
   Day = day();
   Year = year();
   translate(width/2, height/2);
