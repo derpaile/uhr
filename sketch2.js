@@ -21,7 +21,7 @@ function setup() {
   createCanvas(breite, hoehe);
   angleMode(DEGREES);
   //button = createButton('Drück mich pls dann ändere ich mein // Antlitz');
-    sound.loop();
+    sound.play();
 }
 
 
