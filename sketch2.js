@@ -13,7 +13,7 @@ let b = 0;
 let farbeuhr = 255;
 var sound; 
 function preload(){
-     sound = loadSound("clock.mp3");
+     sound = loadSound("clock1minute.mp3");
 
 
 }
@@ -21,7 +21,7 @@ function setup() {
   createCanvas(breite, hoehe);
   angleMode(DEGREES);
   //button = createButton('Drück mich pls dann ändere ich mein // Antlitz');
-    sound.play();
+    sound.loop();
 }
 
 
